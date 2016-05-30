@@ -50,9 +50,10 @@ export default class Item extends React.Component {
       <Watch 
         item={this.props.item}
       />
+      { window.chrome_cast ?
       <ChromeCast
         item={this.props.item}
-      />
+      /> : null }
       <span className='mtime'>{this.mtime()}</span>&nbsp;
       <span className='size'>{this.size_pretty(item.size)}</span>&nbsp;
       <a className='meta' href={meta}>Meta</a>

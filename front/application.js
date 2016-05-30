@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 
-require('./chromecast.js');
+//require('./chromecast.js');
 
 import NoMatch from './components/no_match'
 import Index from './components/index'
