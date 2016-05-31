@@ -1,6 +1,10 @@
 {
   "main": "javascript/main.js",
   "description": "pig",
+  "scripts": {
+    "build": "webpack --config ./webpack.build.js",
+    "watch": "webpack --watch"
+  },
   "dependencies": {
     "react": "0.14.7",
     "react-dom": "0.14.7",
