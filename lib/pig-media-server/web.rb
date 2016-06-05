@@ -54,17 +54,12 @@ module PigMediaServer
     def self.post url, point
       imagedata = url.sub(/data:image\/png;base64,/, '').unpack('m').first
       boundary = '----BOUNDARYBOUNDARY----'
-      id = rand(256**16).to_s(16)
 
       data = <<EOF
 --#{boundary}\r
-content-disposition: form-data; name="id"\r
-\r
-      #{id}\r
---#{boundary}\r
 content-disposition: form-data; name="imagedata"; filename="gyazo.com"\r
 \r
-      #{imagedata}\r
+#{imagedata}\r
 --#{boundary}--\r
 EOF
       header ={
